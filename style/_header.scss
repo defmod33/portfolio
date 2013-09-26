@@ -1,0 +1,29 @@
+header{width:100%; height:120px; margin-bottom:20px; @include topBG; @include extendFull;}
+
+.logo{
+	h1 a:hover{color:$colorThree;}
+}
+
+.nav{
+	float:right;
+	ul{list-style:none;}
+	li{float:left; padding-left:20px; padding-right:20px; border-right:1px solid $colorOne;}
+}
+.topMenu{
+	list-style:none; padding:0; margin:0;
+	> li{position:relative; float:left;
+		&:hover{color:$white; @include mainBGNavOne;}
+	}
+	li:hover > ul{display:inline;}
+	a{padding:0 0 0 10px; display:block;
+		&:hover{color:$white;}
+	}
+}
+.secondLevel{
+	width:145px; position:absolute; top:30px; left:0; list-style:none; padding:0; margin:0; display:none; font-size:14px;
+	> li{position:relative; width:100%; height:30px; @include mainBGNavTwo;
+		&:hover{@include mainBGNavTwo;}
+	}
+}
+.navFour .secondLevel li a img{float:left;}
+
